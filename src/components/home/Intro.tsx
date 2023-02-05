@@ -4,7 +4,6 @@ import { Container } from '../common/Container';
 import {
   ElectronIcon,
   ExpressIcon,
-  JavascriptIcon,
   NestIcon,
   NextIcon,
   ReactIcon,
