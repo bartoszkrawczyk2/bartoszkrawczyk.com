@@ -4,6 +4,7 @@ import { Container } from '../common/Container';
 import me from '../../static/me.jpeg';
 import { useIntersectionAnimation } from '@/hooks/useIntersectionAnimation';
 import { twMerge } from 'tailwind-merge';
+import { NavMenuItem } from './NavMenuItem';
 
 export function Nav() {
   const { ref, className } = useIntersectionAnimation<HTMLDivElement>({
@@ -28,7 +29,13 @@ export function Nav() {
           />
           <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 mix-blend-hard-light opacity-90 group-hover:opacity-0 transition-opacity rounded-full duration-300" />
         </Link>
-        <div>Resume / Github / Get in touch</div>
+        <ul className="flex mt-2 sm:mt-4">
+          <NavMenuItem href="#resume">Resume</NavMenuItem>
+          <NavMenuItem href="https://github.com/bartoszkrawczyk2" target="_blank" rel="noreferrer">
+            Github
+          </NavMenuItem>
+          <NavMenuItem href="#contact">Get in touch</NavMenuItem>
+        </ul>
       </Container>
     </div>
   );

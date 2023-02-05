@@ -9,7 +9,7 @@ interface ResumeProps {
 
 export function Resume({ resume }: ResumeProps) {
   return (
-    <div className="bg-white">
+    <div className="bg-white" id="resume">
       <Container>
         <SectionHeader>Resume</SectionHeader>
         <TimelineWrapper>

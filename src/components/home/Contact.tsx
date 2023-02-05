@@ -4,7 +4,7 @@ import { SectionHeader } from '../common/SectionHeader';
 
 export function Contact() {
   return (
-    <Container>
+    <Container id="contact">
       <SectionHeader>Get in touch</SectionHeader>
       <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
         <a

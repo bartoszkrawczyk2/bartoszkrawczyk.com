@@ -51,7 +51,7 @@ export function TimelineItem({ children, className, resume, ...props }: PropsWit
         <div className="border-b-slate-300 border-b pb-4">{children}</div>
         {resume.responsibilites && (
           <div className="mt-4">
-            <strong className="text-slate-600 font-extrabold tracking-tighter">Tasks and responsibilities: </strong>
+            <strong className="text-slate-600 font-extrabold tracking-tighter">Responsibilities: </strong>
             <p className="mt-1">{resume.responsibilites}</p>
           </div>
         )}
