@@ -1,4 +1,4 @@
-import { BaseIconProps, BaseIconSvg } from './BaseIcon';
+import { BaseIconProps, BaseIconSvg } from '../BaseIcon';
 
 export const TypescriptIcon = (props: BaseIconProps) => (
   <BaseIconSvg {...props}>
@@ -10,3 +10,5 @@ export const TypescriptIcon = (props: BaseIconProps) => (
     </g>
   </BaseIconSvg>
 );
+
+export default TypescriptIcon;

@@ -1,4 +1,4 @@
-import { BaseIconProps, BaseIconSvg } from './BaseIcon';
+import { BaseIconProps, BaseIconSvg } from '../BaseIcon';
 
 export const PlaywrightIcon = (props: BaseIconProps) => (
   <BaseIconSvg viewBox="0 0 400 400" {...props}>
@@ -32,3 +32,5 @@ export const PlaywrightIcon = (props: BaseIconProps) => (
     />
   </BaseIconSvg>
 );
+
+export default PlaywrightIcon;

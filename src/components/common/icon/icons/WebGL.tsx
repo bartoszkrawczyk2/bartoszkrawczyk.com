@@ -1,4 +1,4 @@
-import { BaseIconProps, BaseIconSvg } from './BaseIcon';
+import { BaseIconProps, BaseIconSvg } from '../BaseIcon';
 
 export const WebGLIcon = (props: BaseIconProps) => (
   <BaseIconSvg viewBox="0 0 1082 452.3" {...props}>
@@ -19,3 +19,5 @@ export const WebGLIcon = (props: BaseIconProps) => (
     </g>
   </BaseIconSvg>
 );
+
+export default WebGLIcon;

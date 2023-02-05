@@ -14,13 +14,7 @@ export function Resume({ resume }: ResumeProps) {
         <SectionHeader>Resume</SectionHeader>
         <TimelineWrapper>
           {resume.map((entry) => (
-            <TimelineItem
-              key={entry.id}
-              company={entry.company}
-              position={entry.position}
-              from={entry.from}
-              to={entry.to}
-            >
+            <TimelineItem key={entry.id} resume={entry}>
               <p>{entry.description}</p>
             </TimelineItem>
           ))}

@@ -1,3 +1,4 @@
+import type { IconType } from '@/components/common/icon/Icon';
 import { dateFmt } from '@/utils/intl';
 import { v4 } from 'uuid';
 
@@ -8,6 +9,7 @@ export interface ResumeEntry {
   from: string;
   to: string;
   description: string;
+  icons?: IconType[];
 }
 
 export const resume: ResumeEntry[] = [
@@ -19,6 +21,19 @@ export const resume: ResumeEntry[] = [
     to: dateFmt('Present'),
     description:
       'Tool for sharing traditional whiteboards online. Working with real-time image processing using Typescript, WebGL, SVG, WebWorkers, WASM. Working on low-level optimisations, integrating ML with tensorflow.js, React, XState and Redux, backend work using NestJS.',
+    icons: [
+      'Typescript',
+      'React',
+      'XState',
+      'Tailwind CSS',
+      'Vite',
+      'Electron',
+      'WebGL',
+      'WebAssembly',
+      'TensorFlow.js',
+      'NestJS',
+      'Playwright',
+    ],
   },
   {
     id: v4(),
@@ -28,6 +43,7 @@ export const resume: ResumeEntry[] = [
     to: dateFmt(new Date('2021-10-1')),
     description:
       'Legaltech SaaS. Typescript, React, Redux, styled-components. Responsibilities including managing large codebase, code reviews, mentoring junior developers, deciding on the front-end stack and tooling.',
+    icons: ['Typescript', 'React', 'Redux', 'Styled-components', 'Webpack'],
   },
   {
     id: v4(),
@@ -37,6 +53,7 @@ export const resume: ResumeEntry[] = [
     to: dateFmt(new Date('2023-01-31')),
     description:
       'SaaS platform for photographers. Next.js, Typescript, React, Redux, Css-in-js, SSR. Responsibilities including team management, product design, specifying requirements, front-end development.',
+    icons: ['Typescript', 'React', 'Redux', 'Styled-components', 'Webpack', 'Next.js', 'Cypress'],
   },
   {
     id: v4(),
@@ -45,6 +62,7 @@ export const resume: ResumeEntry[] = [
     from: dateFmt(new Date('2017-07-1')),
     to: dateFmt(new Date('2018-08-3')),
     description: 'Contracted to Sabre to work on large SaaS in the hospitality industry. ES6, React/Redux with SSR.',
+    icons: ['Javascript', 'React', 'Redux', 'Webpack'],
   },
   {
     id: v4(),
@@ -54,6 +72,7 @@ export const resume: ResumeEntry[] = [
     to: dateFmt(new Date('2017-06-3')),
     description:
       'Ad Agency projects. Working with animations, multimedia, Canvas, WebAudio API. Multiple stacks - frameworks and libraries including backbone.js, require.js, jQuery, React, Redux, gulp, Sass, Less.',
+    icons: ['Javascript', 'React', 'jQuery', 'Backbone.js', 'Gulp.js', 'Sass'],
   },
   {
     id: v4(),
@@ -63,6 +82,7 @@ export const resume: ResumeEntry[] = [
     to: dateFmt(new Date('2015/09/1')),
     description:
       'Ad Agency projects. Working with animations, multimedia, Canvas, WebAudio API. Multiple stacks - frameworks and libraries including backbone.js, require.js, jQuery, React, Redux, gulp, Sass, Less.',
+    icons: ['Javascript', 'React', 'jQuery', 'Backbone.js', 'Gulp.js', 'Sass'],
   },
   {
     id: v4(),
@@ -71,6 +91,7 @@ export const resume: ResumeEntry[] = [
     from: dateFmt(new Date('2014/02/1')),
     to: dateFmt(new Date('2014/07/1')),
     description: 'Small software house. PHP, MySQL, Javascript.',
+    icons: ['PHP', 'MySQL', 'Javascript', 'jQuery'],
   },
   {
     id: v4(),
@@ -79,5 +100,6 @@ export const resume: ResumeEntry[] = [
     from: dateFmt(new Date('2013/03/1')),
     to: dateFmt(new Date('2013/04/1')),
     description: 'London based SaaS for childcarers and parents. Wordpress, PHP, MySQL.',
+    icons: ['Wordpress', 'PHP', 'MySQL', 'Javascript', 'jQuery'],
   },
 ];

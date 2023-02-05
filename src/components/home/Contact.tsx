@@ -1,5 +1,5 @@
 import { Container } from '../common/Container';
-import { GithubIcon, LinkedInIcon, TwitterIcon } from '../common/icons';
+import { Icon } from '../common/icon/Icon';
 import { SectionHeader } from '../common/SectionHeader';
 
 export function Contact() {
@@ -13,7 +13,7 @@ export function Contact() {
           target="_blank"
           rel="noreferrer"
         >
-          <LinkedInIcon className="[&>path]:fill-white" /> LinkedIn
+          <Icon icon="LinkedIn" className="[&>path]:fill-white" /> LinkedIn
         </a>
         <a
           className="btn text-white bg-gray-900 hover:bg-gray-800"
@@ -21,7 +21,7 @@ export function Contact() {
           target="_blank"
           rel="noreferrer"
         >
-          <GithubIcon className="[&>g]:fill-white" /> Github
+          <Icon icon="Github" className="[&>g]:fill-white" /> Github
         </a>
         <a
           className="btn text-white bg-gray-900 hover:bg-gray-800"
@@ -29,7 +29,7 @@ export function Contact() {
           target="_blank"
           rel="noreferrer"
         >
-          <TwitterIcon className="[&>path]:fill-white" /> Twitter
+          <Icon icon="Twitter" className="[&>path]:fill-white" /> Twitter
         </a>
       </div>
     </Container>

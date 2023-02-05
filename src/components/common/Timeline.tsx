@@ -1,6 +1,8 @@
+import { ResumeEntry } from '@/data/resume';
 import { useIntersectionAnimation } from '@/hooks/useIntersectionAnimation';
 import { HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
+import { Icon } from './icon/Icon';
 
 export const TimelineWrapper = ({
   children,
@@ -13,21 +15,10 @@ export const TimelineWrapper = ({
 );
 
 interface TimelineItemProps extends HTMLAttributes<HTMLLIElement> {
-  company?: ReactNode;
-  position?: ReactNode;
-  from?: ReactNode;
-  to?: ReactNode;
+  resume: ResumeEntry;
 }
 
-export function TimelineItem({
-  children,
-  className,
-  company,
-  position,
-  from,
-  to,
-  ...props
-}: PropsWithChildren<TimelineItemProps>) {
+export function TimelineItem({ children, className, resume, ...props }: PropsWithChildren<TimelineItemProps>) {
   const { ref, className: animatedClassName } = useIntersectionAnimation<HTMLDivElement>({
     hidden: 'md:opacity-0 md:-translate-x-16',
     visible: 'md:opacity-100 md:translate-x-0',
@@ -43,21 +34,30 @@ export function TimelineItem({
       )}
       {...props}
     >
-      {(from || to) && (
+      {(resume.from || resume.to) && (
         <div className="md:absolute left-0 pt-5 text-slate-600 md:text-right w-60 md:pr-16 pb-4 md:pb-0">
-          {[from, to].filter((v) => v).join(' - ')}
+          {[resume.from, resume.to].filter((v) => v).join(' - ')}
         </div>
       )}
       <div ref={ref} className={twMerge('p-6 bg-slate-100 rounded', animatedClassName)}>
-        {company && (
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tighter mb-0.5">{company}</h3>
+        {resume.company && (
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tighter mb-0.5">{resume.company}</h3>
         )}
-        {position && (
+        {resume.position && (
           <h4 className="text-blue-600 text-lg sm:text-xl md:text-2xl font-extrabold tracking-tighter mb-4">
-            {position}
+            {resume.position}
           </h4>
         )}
         {children}
+        {!!resume.icons?.length && (
+          <div className="flex flex-wrap gap-2 mt-6">
+            {resume.icons.map((icon) => (
+              <span key={icon} title={icon}>
+                <Icon icon={icon} className="h-6 md:h-8" dimmed />
+              </span>
+            ))}
+          </div>
+        )}
       </div>
     </li>
   );

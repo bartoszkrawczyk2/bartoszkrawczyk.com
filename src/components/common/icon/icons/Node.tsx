@@ -1,4 +1,4 @@
-import { BaseIconProps, BaseIconSvg } from './BaseIcon';
+import { BaseIconProps, BaseIconSvg } from '../BaseIcon';
 
 export const NodeIcon = (props: BaseIconProps) => (
   <BaseIconSvg {...props}>
@@ -8,3 +8,5 @@ export const NodeIcon = (props: BaseIconProps) => (
     ></path>
   </BaseIconSvg>
 );
+
+export default NodeIcon;

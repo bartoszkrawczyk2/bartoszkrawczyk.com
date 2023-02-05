@@ -1,5 +1,5 @@
 import { twMerge } from 'tailwind-merge';
-import { BaseIconProps, BaseIconSvg } from './BaseIcon';
+import { BaseIconProps, BaseIconSvg } from '../BaseIcon';
 
 export const TailwindIcon = (props: BaseIconProps) => (
   <BaseIconSvg {...props}>
@@ -9,3 +9,5 @@ export const TailwindIcon = (props: BaseIconProps) => (
     ></path>
   </BaseIconSvg>
 );
+
+export default TailwindIcon;

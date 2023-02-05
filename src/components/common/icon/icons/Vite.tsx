@@ -1,4 +1,4 @@
-import { BaseIconProps, BaseIconSvg } from './BaseIcon';
+import { BaseIconProps, BaseIconSvg } from '../BaseIcon';
 
 export const ViteIcon = (props: BaseIconProps) => (
   <BaseIconSvg viewBox="0 0 24 24" {...props}>
@@ -12,3 +12,5 @@ export const ViteIcon = (props: BaseIconProps) => (
     ></path>
   </BaseIconSvg>
 );
+
+export default ViteIcon;

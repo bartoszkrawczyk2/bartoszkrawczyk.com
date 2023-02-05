@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import { PropsWithChildren, SVGProps } from 'react';
+import { twMerge } from 'tailwind-merge';
 import style from './BaseIcon.module.css';
 
 export interface BaseIconProps extends Omit<SVGProps<SVGSVGElement>, 'children'> {
@@ -10,7 +11,7 @@ export const BaseIconSvg = ({ children, className, dimmed, color, ...props }: Pr
   <svg
     style={{ color }}
     viewBox="0 0 128 128"
-    className={classNames('h-8', className, {
+    className={classNames(twMerge('h-8', className), {
       [style.dimmed]: dimmed,
     })}
     {...props}

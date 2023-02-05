@@ -1,4 +1,4 @@
-import { BaseIconProps, BaseIconSvg } from './BaseIcon';
+import { BaseIconProps, BaseIconSvg } from '../BaseIcon';
 
 export const ReduxIcon = (props: BaseIconProps) => (
   <BaseIconSvg {...props}>
@@ -8,3 +8,5 @@ export const ReduxIcon = (props: BaseIconProps) => (
     ></path>
   </BaseIconSvg>
 );
+
+export default ReduxIcon;
