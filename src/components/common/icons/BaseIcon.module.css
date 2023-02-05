@@ -1,0 +1,11 @@
+.dimmed path,
+.dimmed circle,
+.dimmed polygon {
+  @apply transition-colors;
+}
+
+.dimmed:not(:hover) path,
+.dimmed:not(:hover) circle,
+.dimmed:not(:hover) polygon {
+  @apply fill-slate-400;
+}
