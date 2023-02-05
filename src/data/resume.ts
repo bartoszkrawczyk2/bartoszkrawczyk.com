@@ -55,7 +55,7 @@ export const resume: ResumeEntry[] = [
     from: dateFmt(new Date('2018-01-10')),
     to: dateFmt(new Date('2023-01-31')),
     description: 'SaaS platform for photographers and their clients.',
-    responsibilites: 'Team management, product design, specifying requirements, front-end development',
+    responsibilites: 'Team management, product design, specifying requirements, front-end development.',
     icons: ['Typescript', 'React', 'Redux', 'Styled-components', 'Webpack', 'Next.js', 'Cypress'],
   },
   {
@@ -85,8 +85,7 @@ export const resume: ResumeEntry[] = [
     from: dateFmt(new Date('2014/08/1')),
     to: dateFmt(new Date('2015/09/1')),
     description: 'Marketing agency.',
-    responsibilites:
-      'Front-end development, working with clients, building sites with animations, multimedia, mobile-first',
+    responsibilites: 'Front-end development, working with clients, building sites with animations, multimedia and RWD.',
     icons: ['Javascript', 'React', 'jQuery', 'Backbone.js', 'Gulp.js', 'Sass'],
   },
   {
