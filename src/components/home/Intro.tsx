@@ -1,7 +1,7 @@
 import { useIntersectionAnimation } from '@/hooks/useIntersectionAnimation';
 import { twMerge } from 'tailwind-merge';
 import { Container } from '../common/Container';
-import { Icon } from '../common/icon/Icon';
+import { Icon, IconType } from '../common/icon/Icon';
 
 export function Intro() {
   const h1 = useIntersectionAnimation<HTMLHeadingElement>({
@@ -16,6 +16,22 @@ export function Intro() {
     base: 'delay-300',
     freezeOnceVisible: true,
   });
+
+  const icons: IconType[] = [
+    'Typescript',
+    'React',
+    'Redux',
+    'Next.js',
+    'Vite',
+    'Webpack',
+    'WebGL',
+    'Electron',
+    'Tailwind CSS',
+    'Node.js',
+    'Express',
+    'Jest',
+    'Playwright',
+  ];
 
   return (
     <Container className="text-center mt-12 sm:mt-24">
@@ -43,20 +59,11 @@ export function Intro() {
         </a>
       </div>
       <div className="flex gap-2 flex-wrap justify-center mt-14 w-52 sm:w-auto mx-auto mb-14 sm:mb-20">
-        <Icon icon="Typescript" dimmed />
-        <Icon icon="React" dimmed />
-        <Icon icon="Redux" dimmed />
-        <Icon icon="Next.js" dimmed />
-        <Icon icon="Vite" dimmed />
-        <Icon icon="Webpack" dimmed />
-        <Icon icon="WebGL" dimmed />
-        <Icon icon="Electron" dimmed />
-        <Icon icon="Tailwind CSS" dimmed />
-        <Icon icon="Node.js" dimmed />
-        <Icon icon="Express" dimmed />
-        <Icon icon="NestJS" dimmed />
-        <Icon icon="Jest" dimmed />
-        <Icon icon="Playwright" dimmed />
+        {icons.map((icon) => (
+          <span key={icon} title={icon}>
+            <Icon icon={icon} dimmed />
+          </span>
+        ))}
       </div>
     </Container>
   );
