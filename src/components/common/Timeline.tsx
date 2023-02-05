@@ -48,7 +48,13 @@ export function TimelineItem({ children, className, resume, ...props }: PropsWit
             {resume.position}
           </h4>
         )}
-        {children}
+        <div className="border-b-slate-300 border-b pb-4">{children}</div>
+        {resume.responsibilites && (
+          <div className="mt-4">
+            <strong className="text-slate-600 font-extrabold tracking-tighter">Tasks and responsibilities: </strong>
+            <p className="mt-1">{resume.responsibilites}</p>
+          </div>
+        )}
         {!!resume.icons?.length && (
           <div className="flex flex-wrap gap-2 mt-6">
             {resume.icons.map((icon) => (

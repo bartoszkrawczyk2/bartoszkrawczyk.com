@@ -9,6 +9,7 @@ export interface ResumeEntry {
   from: string;
   to: string;
   description: string;
+  responsibilites?: string;
   icons?: IconType[];
 }
 
@@ -19,8 +20,9 @@ export const resume: ResumeEntry[] = [
     position: 'Senior software developer',
     from: dateFmt(new Date('2021-11-1')),
     to: dateFmt('Present'),
-    description:
-      'Tool for sharing traditional whiteboards online. Working with real-time image processing using Typescript, WebGL, SVG, WebWorkers, WASM. Working on low-level optimisations, integrating ML with tensorflow.js, React, XState and Redux, backend work using NestJS.',
+    description: 'Tool for sharing traditional whiteboards online.',
+    responsibilites:
+      'Working with real-time image processing using WebGL, WebWorkers, WebAssembly. Working on low-level optimisations, integrating machine learning models.',
     icons: [
       'Typescript',
       'React',
@@ -41,8 +43,9 @@ export const resume: ResumeEntry[] = [
     position: 'Senior front-end developer',
     from: dateFmt(new Date('2018-09-1')),
     to: dateFmt(new Date('2021-10-1')),
-    description:
-      'Legaltech SaaS. Typescript, React, Redux, styled-components. Responsibilities including managing large codebase, code reviews, mentoring junior developers, deciding on the front-end stack and tooling.',
+    description: 'Legaltech SaaS.',
+    responsibilites:
+      'Managing large, modular codebase, code reviews, mentoring junior developers, choosing front-end stack and tooling',
     icons: ['Typescript', 'React', 'Redux', 'Styled-components', 'Webpack'],
   },
   {
@@ -51,8 +54,8 @@ export const resume: ResumeEntry[] = [
     position: 'Co-founder, front-end developer',
     from: dateFmt(new Date('2018-01-10')),
     to: dateFmt(new Date('2023-01-31')),
-    description:
-      'SaaS platform for photographers. Next.js, Typescript, React, Redux, Css-in-js, SSR. Responsibilities including team management, product design, specifying requirements, front-end development.',
+    description: 'SaaS platform for photographers and their clients.',
+    responsibilites: 'Team management, product design, specifying requirements, front-end development',
     icons: ['Typescript', 'React', 'Redux', 'Styled-components', 'Webpack', 'Next.js', 'Cypress'],
   },
   {
@@ -61,7 +64,7 @@ export const resume: ResumeEntry[] = [
     position: 'Senior front-end developer',
     from: dateFmt(new Date('2017-07-1')),
     to: dateFmt(new Date('2018-08-3')),
-    description: 'Contracted to Sabre to work on large SaaS in the hospitality industry. ES6, React/Redux with SSR.',
+    description: 'Contracted to Sabre to work on large SaaS in the hospitality industry.',
     icons: ['Javascript', 'React', 'Redux', 'Webpack'],
   },
   {
@@ -70,8 +73,9 @@ export const resume: ResumeEntry[] = [
     position: 'Senior front-end developer',
     from: dateFmt(new Date('2015-09-1')),
     to: dateFmt(new Date('2017-06-3')),
-    description:
-      'Ad Agency projects. Working with animations, multimedia, Canvas, WebAudio API. Multiple stacks - frameworks and libraries including backbone.js, require.js, jQuery, React, Redux, gulp, Sass, Less.',
+    description: 'Marketing agency.',
+    responsibilites:
+      'Leading a team of developers, code reviews, choosing front-end tooling. Working with animations, WebAudio API, video, canvas.',
     icons: ['Javascript', 'React', 'jQuery', 'Backbone.js', 'Gulp.js', 'Sass'],
   },
   {
@@ -80,8 +84,9 @@ export const resume: ResumeEntry[] = [
     position: 'Mid front-end developer',
     from: dateFmt(new Date('2014/08/1')),
     to: dateFmt(new Date('2015/09/1')),
-    description:
-      'Ad Agency projects. Working with animations, multimedia, Canvas, WebAudio API. Multiple stacks - frameworks and libraries including backbone.js, require.js, jQuery, React, Redux, gulp, Sass, Less.',
+    description: 'Marketing agency.',
+    responsibilites:
+      'Front-end development, working with clients, building sites with animations, multimedia, mobile-first',
     icons: ['Javascript', 'React', 'jQuery', 'Backbone.js', 'Gulp.js', 'Sass'],
   },
   {
@@ -90,7 +95,7 @@ export const resume: ResumeEntry[] = [
     position: 'Full-stack web developer',
     from: dateFmt(new Date('2014/02/1')),
     to: dateFmt(new Date('2014/07/1')),
-    description: 'Small software house. PHP, MySQL, Javascript.',
+    description: 'Small software house.',
     icons: ['PHP', 'MySQL', 'Javascript', 'jQuery'],
   },
   {
@@ -99,7 +104,7 @@ export const resume: ResumeEntry[] = [
     position: 'Full-stack web developer',
     from: dateFmt(new Date('2013/03/1')),
     to: dateFmt(new Date('2013/04/1')),
-    description: 'London based SaaS for childcarers and parents. Wordpress, PHP, MySQL.',
+    description: 'London based SaaS for childcarers and parents.',
     icons: ['Wordpress', 'PHP', 'MySQL', 'Javascript', 'jQuery'],
   },
 ];
