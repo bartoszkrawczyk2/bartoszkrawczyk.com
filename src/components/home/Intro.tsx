@@ -7,14 +7,12 @@ export function Intro() {
   const h1 = useIntersectionAnimation<HTMLHeadingElement>({
     hidden: 'opacity-0 -translate-x-16',
     visible: 'opacity-100 translate-x-0',
-    freezeOnceVisible: true,
   });
 
   const h2 = useIntersectionAnimation<HTMLHeadingElement>({
     hidden: 'opacity-0 -translate-x-16',
     visible: 'opacity-100 translate-x-0',
     base: 'delay-300',
-    freezeOnceVisible: true,
   });
 
   const icons: IconType[] = [
