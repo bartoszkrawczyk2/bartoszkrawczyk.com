@@ -28,7 +28,7 @@ export function Nav() {
           />
           <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 mix-blend-hard-light opacity-90 group-hover:opacity-0 transition-opacity rounded-full duration-300" />
         </Link>
-        <div>Resume / Personal work / Get in touch</div>
+        <div>Resume / Github / Get in touch</div>
       </Container>
     </div>
   );

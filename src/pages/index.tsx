@@ -1,4 +1,5 @@
 import { Intro } from '@/components/home/Intro';
+import { Resume } from '@/components/home/Resume';
 import { Nav } from '@/components/layout/Nav';
 import Head from 'next/head';
 
@@ -16,6 +17,7 @@ export default function Home() {
       </Head>
       <Nav />
       <Intro />
+      <Resume />
     </>
   );
 }
