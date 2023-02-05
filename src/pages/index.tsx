@@ -1,9 +1,16 @@
+import { Contact } from '@/components/home/Contact';
 import { Intro } from '@/components/home/Intro';
 import { Resume } from '@/components/home/Resume';
 import { Nav } from '@/components/layout/Nav';
+import { resume, ResumeEntry } from '@/data/resume';
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 
-export default function Home() {
+interface HomeProps {
+  resume: ResumeEntry[];
+}
+
+export default function Home({ resume }: HomeProps) {
   return (
     <>
       <Head>
@@ -17,7 +24,16 @@ export default function Home() {
       </Head>
       <Nav />
       <Intro />
-      <Resume />
+      <Resume resume={resume} />
+      <Contact />
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps<HomeProps> = () => {
+  return {
+    props: {
+      resume,
+    },
+  };
+};

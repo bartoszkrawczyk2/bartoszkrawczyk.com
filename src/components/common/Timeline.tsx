@@ -1,5 +1,4 @@
 import { useIntersectionAnimation } from '@/hooks/useIntersectionAnimation';
-import { dateFmt, FmtDate } from '@/utils/intl';
 import { HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
 
@@ -16,8 +15,8 @@ export const TimelineWrapper = ({
 interface TimelineItemProps extends HTMLAttributes<HTMLLIElement> {
   company?: ReactNode;
   position?: ReactNode;
-  from?: FmtDate;
-  to?: FmtDate;
+  from?: ReactNode;
+  to?: ReactNode;
 }
 
 export function TimelineItem({
@@ -46,7 +45,7 @@ export function TimelineItem({
     >
       {(from || to) && (
         <div className="absolute left-0 pt-5 text-slate-600 text-right w-60 pr-16">
-          {[from && dateFmt(from), to && dateFmt(to)].filter((v) => v).join(' - ')}
+          {[from, to].filter((v) => v).join(' - ')}
         </div>
       )}
       <div ref={ref} className={twMerge('p-6 bg-slate-100 rounded', animatedClassName)}>

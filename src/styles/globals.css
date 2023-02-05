@@ -11,6 +11,10 @@
   @apply px-8 py-3 shadow-lg;
 }
 
+.btn > svg {
+  @apply mr-4 h-6 -ml-2;
+}
+
 .btn-sm {
   @apply px-4 py-2 shadow;
 }

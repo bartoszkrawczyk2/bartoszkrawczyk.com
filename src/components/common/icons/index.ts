@@ -13,3 +13,6 @@ export { WebpackIcon } from './Webpack';
 export { WebGLIcon } from './WebGL';
 export { ReduxIcon } from './Redux';
 export { NodeIcon } from './Node';
+export { GithubIcon } from './Github';
+export { LinkedInIcon } from './LinkedIn';
+export { TwitterIcon } from './Twitter';
