@@ -35,10 +35,10 @@ export function Intro() {
         front-end developer.
       </h2>
       <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8 sm:mt-16 items-center">
-        <a className="btn text-white bg-gray-900 hover:bg-gray-800" href="#">
+        <a className="btn text-white bg-gray-900 hover:bg-gray-800" href="#resume">
           Resume
         </a>
-        <a className="btn text-white bg-blue-600 hover:bg-blue-700" href="#">
+        <a className="btn text-white bg-blue-600 hover:bg-blue-700" href="#contact">
           Get in touch
         </a>
       </div>
