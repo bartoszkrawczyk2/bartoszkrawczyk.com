@@ -37,21 +37,24 @@ export function Intro() {
   });
 
   return (
-    <Container className="text-center mt-24">
+    <Container className="text-center mt-12 sm:mt-24">
       <h1
         className={twMerge(
-          'text-6xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-400 font-extrabold tracking-tighter',
+          'text-4xl sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-400 font-extrabold tracking-tighter',
           h1.className
         )}
         ref={h1.ref}
       >
         Hi! I’m Bartosz,
       </h1>
-      <h2 ref={h2.ref} className={twMerge('text-5xl mt-4 font-extrabold tracking-tighter', h2.className)}>
+      <h2
+        ref={h2.ref}
+        className={twMerge('text-2xl sm:text-5xl mt-2 sm:mt-4 font-extrabold tracking-tighter', h2.className)}
+      >
         front-end developer.
       </h2>
       <div className={buttons.className} ref={buttons.ref}>
-        <div className="flex gap-4 justify-center mt-16">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8 sm:mt-16 items-center">
           <a className="btn text-white bg-gray-900 hover:bg-gray-800" href="#">
             Resume
           </a>
@@ -59,7 +62,7 @@ export function Intro() {
             Get in touch
           </a>
         </div>
-        <div className="flex gap-2 flex-wrap justify-center mt-14">
+        <div className="flex gap-2 flex-wrap justify-center mt-14 w-52 sm:w-auto mx-auto">
           <TypescriptIcon dimmed />
           <ReactIcon dimmed />
           <ReduxIcon dimmed />

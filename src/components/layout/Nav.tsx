@@ -16,7 +16,7 @@ export function Nav() {
 
   return (
     <div ref={ref} className={twMerge('sticky top-[-1px] z-10', className)}>
-      <Container className="flex items-center justify-between py-4 ">
+      <Container className="flex flex-col sm:flex-row items-center justify-between py-4 ">
         <Link
           href="/"
           className="relative group opacity-90 hover:opacity-100 transition-all hover:shadow-lg rounded-full duration-300"
@@ -24,7 +24,7 @@ export function Nav() {
           <Image
             src={me}
             alt="Profile Picture"
-            className="rounded-full w-8 md:w-12 h-8 md:h-12 saturate-0 group-hover:saturate-100 transition-all duration-300"
+            className="rounded-full w-10 md:w-12 h-10 md:h-12 saturate-0 group-hover:saturate-100 transition-all duration-300"
           />
           <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 mix-blend-hard-light opacity-90 group-hover:opacity-0 transition-opacity rounded-full duration-300" />
         </Link>
