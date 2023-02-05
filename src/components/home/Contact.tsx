@@ -6,7 +6,7 @@ export function Contact() {
   return (
     <Container>
       <SectionHeader>Get in touch</SectionHeader>
-      <div className="flex gap-4 justify-center mb-20">
+      <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
         <a
           className="btn text-white bg-gray-900 hover:bg-gray-800"
           href="https://www.linkedin.com/in/bartoszkrawczyk/"
