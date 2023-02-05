@@ -24,6 +24,7 @@ export function TimelineItem({ children, className, resume, ...props }: PropsWit
     visible: 'md:opacity-100 md:translate-x-0',
     base: 'delay-300',
     threshold: 0.5,
+    freezeOnceVisible: true,
   });
 
   return (
