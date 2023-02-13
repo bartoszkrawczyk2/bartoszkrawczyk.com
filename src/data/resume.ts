@@ -22,7 +22,7 @@ export const resume: ResumeEntry[] = [
     to: dateFmt('Present'),
     description: 'Tool for sharing traditional whiteboards online.',
     responsibilites:
-      'Working with real-time image processing using WebGL, WebWorkers, WebAssembly. Working on low-level optimisations, integrating machine learning models.',
+      'Working with real-time image processing using WebGL, WebWorkers, Canvas, SVG and WebAssembly. Working on low-level optimisations, integrating machine learning models.',
     icons: [
       'Typescript',
       'React',
