@@ -9,17 +9,19 @@ interface ResumeProps {
 
 export function Resume({ resume }: ResumeProps) {
   return (
-    <div className="bg-white" id="resume">
-      <Container>
-        <SectionHeader>Resume</SectionHeader>
-        <TimelineWrapper>
-          {resume.map((entry) => (
-            <TimelineItem key={entry.id} resume={entry}>
-              <p>{entry.description}</p>
-            </TimelineItem>
-          ))}
-        </TimelineWrapper>
-      </Container>
-    </div>
+    <section id="resume" className="pt-12">
+      <div className="bg-white">
+        <Container>
+          <SectionHeader>Resume</SectionHeader>
+          <TimelineWrapper>
+            {resume.map((entry) => (
+              <TimelineItem key={entry.id} resume={entry}>
+                <p>{entry.description}</p>
+              </TimelineItem>
+            ))}
+          </TimelineWrapper>
+        </Container>
+      </div>
+    </section>
   );
 }

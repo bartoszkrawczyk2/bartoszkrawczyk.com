@@ -56,7 +56,7 @@ export function Intro() {
           Get in touch
         </a>
       </div>
-      <div className="flex gap-2 flex-wrap justify-center mt-14 w-52 sm:w-auto mx-auto mb-14 sm:mb-20">
+      <div className="flex gap-2 flex-wrap justify-center mt-14 w-52 sm:w-auto mx-auto mb-2 sm:mb-8">
         {icons.map((icon) => (
           <span key={icon} title={icon}>
             <Icon icon={icon} dimmed />
