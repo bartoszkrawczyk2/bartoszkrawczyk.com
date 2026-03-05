@@ -1,20 +1,7 @@
-import { useIntersectionAnimation } from '@/hooks/useIntersectionAnimation';
-import { twMerge } from 'tailwind-merge';
 import { Container } from '../common/Container';
 import { Icon, IconType } from '../common/icon/Icon';
 
 export function Intro() {
-  const h1 = useIntersectionAnimation<HTMLHeadingElement>({
-    hidden: 'opacity-0 -translate-x-16',
-    visible: 'opacity-100 translate-x-0',
-  });
-
-  const h2 = useIntersectionAnimation<HTMLHeadingElement>({
-    hidden: 'opacity-0 -translate-x-16',
-    visible: 'opacity-100 translate-x-0',
-    base: 'delay-300',
-  });
-
   const icons: IconType[] = [
     'Typescript',
     'React',
@@ -33,19 +20,10 @@ export function Intro() {
 
   return (
     <Container className="text-center mt-12 sm:mt-24">
-      <h1
-        className={twMerge(
-          'text-4xl sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-400 font-extrabold tracking-tighter',
-          h1.className
-        )}
-        ref={h1.ref}
-      >
-        Hi! I’m Bartosz,
+      <h1 className="text-4xl sm:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-400 font-extrabold tracking-tighter animate-on-load">
+        Hi! I'm Bartosz,
       </h1>
-      <h2
-        ref={h2.ref}
-        className={twMerge('text-2xl sm:text-5xl mt-2 sm:mt-4 font-extrabold tracking-tighter', h2.className)}
-      >
+      <h2 className="text-2xl sm:text-5xl mt-2 sm:mt-4 font-extrabold tracking-tighter animate-on-load-delayed">
         front-end developer.
       </h2>
       <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8 sm:mt-16 items-center">

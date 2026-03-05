@@ -2,21 +2,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Container } from '../common/Container';
 import me from '../../static/me.jpeg';
-import { useIntersectionAnimation } from '@/hooks/useIntersectionAnimation';
-import { twMerge } from 'tailwind-merge';
 import { NavMenuItem } from './NavMenuItem';
 
 export function Nav() {
-  const { ref, className } = useIntersectionAnimation<HTMLDivElement>({
-    visible: 'backdrop-blur bg-white bg-opacity-50 shadow-sm',
-    hidden: 'backdrop-blur-0 bg-transparent',
-    base: 'duration-300',
-    threshold: 1,
-    getVisibility: (intersection) => (intersection ? intersection.intersectionRatio < 1 : false),
-  });
-
   return (
-    <div ref={ref} className={twMerge('sticky top-[-1px] z-10', className)}>
+    <div className="sticky top-0 z-10 nav-scroll-animate">
       <Container className="flex flex-col sm:flex-row items-center justify-between py-4 ">
         <Link
           href="/"

@@ -22,3 +22,77 @@ html {
 .btn-sm {
   @apply px-4 py-2 shadow;
 }
+
+/* Page-load animations */
+.animate-on-load {
+  animation: fade-slide-in 0.5s ease-out both;
+}
+
+.animate-on-load-delayed {
+  animation: fade-slide-in 0.5s ease-out 0.3s both;
+}
+
+/* Scroll-driven animations */
+@keyframes fade-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-4rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-slide-in-delayed {
+  0%,
+  30% {
+    opacity: 0;
+    transform: translateX(-4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-on-scroll {
+  animation: fade-slide-in linear both;
+  animation-timeline: view();
+  animation-range: entry 60% entry 85%;
+}
+
+.animate-on-scroll-delayed {
+  animation: fade-slide-in-delayed linear both;
+  animation-timeline: view();
+  animation-range: entry 60% entry 95%;
+}
+
+/* Timeline item animation - only on md+ screens */
+@media (min-width: 768px) {
+  .animate-timeline-item {
+    animation: fade-slide-in linear both;
+    animation-timeline: view();
+    animation-range: entry 45% entry 85%;
+  }
+}
+
+/* Nav scroll-based background */
+@keyframes nav-scroll-bg {
+  from {
+    background-color: transparent;
+    backdrop-filter: blur(0);
+    box-shadow: none;
+  }
+  to {
+    background-color: rgb(255 255 255 / 0.5);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  }
+}
+
+.nav-scroll-animate {
+  animation: nav-scroll-bg linear both;
+  animation-timeline: scroll();
+  animation-range: 0px 100px;
+}
