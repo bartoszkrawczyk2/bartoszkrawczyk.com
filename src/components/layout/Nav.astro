@@ -1,0 +1,29 @@
+---
+import Container from '../common/Container.astro';
+import NavMenuItem from './NavMenuItem.astro';
+import { Image } from 'astro:assets';
+import me from '../../static/me.jpeg';
+---
+
+<div class="sticky top-0 z-10 nav-scroll-animate">
+  <Container class="flex flex-col sm:flex-row items-center justify-between py-4">
+    <a
+      href="/"
+      class="relative group opacity-90 hover:opacity-100 transition-all hover:shadow-lg rounded-full duration-300"
+    >
+      <Image
+        src={me}
+        alt="Profile Picture"
+        class="rounded-full w-10 md:w-12 h-10 md:h-12 saturate-0 group-hover:saturate-100 transition-all duration-300"
+      />
+      <span
+        class="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 mix-blend-hard-light opacity-90 group-hover:opacity-0 transition-opacity rounded-full duration-300"
+      ></span>
+    </a>
+    <ul class="flex mt-2 sm:mt-4">
+      <NavMenuItem href="#resume">Resume</NavMenuItem>
+      <NavMenuItem href="https://github.com/bartoszkrawczyk2" target="_blank" rel="noreferrer"> Github </NavMenuItem>
+      <NavMenuItem href="#contact">Get in touch</NavMenuItem>
+    </ul>
+  </Container>
+</div>

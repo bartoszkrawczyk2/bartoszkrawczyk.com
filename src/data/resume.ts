@@ -1,6 +1,5 @@
-import type { IconType } from '@/components/common/icon/Icon';
+import type { IconType } from '@/components/common/icon/types';
 import { dateFmt } from '@/utils/intl';
-import { v4 } from 'uuid';
 
 export interface ResumeEntry {
   id: string;
@@ -15,7 +14,7 @@ export interface ResumeEntry {
 
 export const resume: ResumeEntry[] = [
   {
-    id: v4(),
+    id: '1',
     company: 'Schibsted Tech Polska',
     position: 'Senior software engineer',
     from: dateFmt(new Date('2024-06-1')),
@@ -26,7 +25,7 @@ export const resume: ResumeEntry[] = [
     icons: ['Typescript', 'React', 'Redux', 'Webpack', 'Express', 'Node.js', 'Playwright'],
   },
   {
-    id: v4(),
+    id: '2',
     company: 'ShareTheBoard',
     position: 'Senior software developer',
     from: dateFmt(new Date('2021-11-1')),
@@ -49,7 +48,7 @@ export const resume: ResumeEntry[] = [
     ],
   },
   {
-    id: v4(),
+    id: '3',
     company: 'Legalcluster',
     position: 'Senior front-end developer',
     from: dateFmt(new Date('2018-09-1')),
@@ -60,7 +59,7 @@ export const resume: ResumeEntry[] = [
     icons: ['Typescript', 'React', 'Redux', 'Styled-components', 'Webpack'],
   },
   {
-    id: v4(),
+    id: '4',
     company: 'Pictemi',
     position: 'Co-founder, front-end developer',
     from: dateFmt(new Date('2018-01-10')),
@@ -70,7 +69,7 @@ export const resume: ResumeEntry[] = [
     icons: ['Typescript', 'React', 'Redux', 'Styled-components', 'Webpack', 'Next.js', 'Cypress'],
   },
   {
-    id: v4(),
+    id: '5',
     company: 'Applandeo / Sabre',
     position: 'Senior front-end developer',
     from: dateFmt(new Date('2017-07-1')),
@@ -79,7 +78,7 @@ export const resume: ResumeEntry[] = [
     icons: ['Javascript', 'React', 'Redux', 'Webpack'],
   },
   {
-    id: v4(),
+    id: '6',
     company: 'VML',
     position: 'Senior front-end developer',
     from: dateFmt(new Date('2015-09-1')),
@@ -90,7 +89,7 @@ export const resume: ResumeEntry[] = [
     icons: ['Javascript', 'React', 'jQuery', 'Backbone.js', 'Gulp.js', 'Sass'],
   },
   {
-    id: v4(),
+    id: '7',
     company: 'VML',
     position: 'Mid front-end developer',
     from: dateFmt(new Date('2014/08/1')),
@@ -100,7 +99,7 @@ export const resume: ResumeEntry[] = [
     icons: ['Javascript', 'React', 'jQuery', 'Backbone.js', 'Gulp.js', 'Sass'],
   },
   {
-    id: v4(),
+    id: '8',
     company: 'Agencja 71',
     position: 'Full-stack web developer',
     from: dateFmt(new Date('2014/02/1')),
@@ -109,7 +108,7 @@ export const resume: ResumeEntry[] = [
     icons: ['PHP', 'MySQL', 'Javascript', 'jQuery'],
   },
   {
-    id: v4(),
+    id: '9',
     company: 'NannyClub / Investors in Ideas Ltd',
     position: 'Full-stack web developer',
     from: dateFmt(new Date('2013/03/1')),

@@ -1,0 +1,24 @@
+---
+import Container from '../common/Container.astro';
+import SectionHeader from '../common/SectionHeader.astro';
+import TimelineWrapper from '../common/TimelineWrapper.astro';
+import TimelineItem from '../common/TimelineItem.astro';
+import { resume } from '@/data/resume';
+---
+
+<section id="resume" class="pt-12">
+  <div class="bg-white">
+    <Container>
+      <SectionHeader>Resume</SectionHeader>
+      <TimelineWrapper>
+        {
+          resume.map((entry) => (
+            <TimelineItem resume={entry}>
+              <p>{entry.description}</p>
+            </TimelineItem>
+          ))
+        }
+      </TimelineWrapper>
+    </Container>
+  </div>
+</section>
