@@ -16,6 +16,17 @@ export interface ResumeEntry {
 export const resume: ResumeEntry[] = [
   {
     id: v4(),
+    company: 'Schibsted Tech Polska',
+    position: 'Senior software engineer',
+    from: dateFmt(new Date('2024-06-1')),
+    to: dateFmt('Present'),
+    description: 'Ad Booking platform',
+    responsibilites:
+      'Maintaining complex ad tech web platform. Full stack development with strong focus on front-end and robust architecture.',
+    icons: ['Typescript', 'React', 'Redux', 'Webpack', 'Express', 'Node.js', 'Playwright'],
+  },
+  {
+    id: v4(),
     company: 'ShareTheBoard',
     position: 'Senior software developer',
     from: dateFmt(new Date('2021-11-1')),
