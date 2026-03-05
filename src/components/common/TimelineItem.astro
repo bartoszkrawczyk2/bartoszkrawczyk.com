@@ -1,15 +1,18 @@
 ---
 import { twMerge } from 'tailwind-merge';
 import Icon from './icon/Icon.astro';
-import type { ResumeEntry } from '@/data/resume';
+import type { CollectionEntry } from 'astro:content';
+import { dateFmt } from '@/utils/intl';
 
 interface Props {
   class?: string;
-  resume: ResumeEntry;
+  entry: CollectionEntry<'resume'>;
 }
 
-const { class: className, resume, ...props } = Astro.props;
-const dateRange = [resume.from, resume.to].filter((v) => v).join(' - ');
+const { class: className, entry, ...props } = Astro.props;
+const { data } = entry;
+const { Content } = await entry.render();
+const dateRange = [dateFmt(data.from), dateFmt(data.to)].join(' - ');
 ---
 
 <li
@@ -19,39 +22,19 @@ const dateRange = [resume.from, resume.to].filter((v) => v).join(' - ');
   )}
   {...props}
 >
-  {
-    (resume.from || resume.to) && (
-      <div class="md:absolute left-0 pt-5 text-slate-600 md:text-right w-60 md:pr-16 pb-4 md:pb-0">{dateRange}</div>
-    )
-  }
+  <div class="md:absolute left-0 pt-5 text-slate-600 md:text-right w-60 md:pr-16 pb-4 md:pb-0">{dateRange}</div>
   <div class="p-6 bg-slate-100 rounded animate-timeline-item">
-    {
-      resume.company && (
-        <h3 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tighter mb-0.5">{resume.company}</h3>
-      )
-    }
-    {
-      resume.position && (
-        <h4 class="text-blue-600 text-lg sm:text-xl md:text-2xl font-extrabold tracking-tighter mb-4">
-          {resume.position}
-        </h4>
-      )
-    }
-    <div class="border-b-slate-300 border-b pb-4">
-      <slot />
+    <h3 class="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tighter mb-0.5">{data.company}</h3>
+    <h4 class="text-blue-600 text-lg sm:text-xl md:text-2xl font-extrabold tracking-tighter mb-4">
+      {data.position}
+    </h4>
+    <div class="resume-content">
+      <Content />
     </div>
     {
-      resume.responsibilites && (
-        <div class="mt-4">
-          <strong class="text-slate-600 font-extrabold tracking-tighter">Responsibilities: </strong>
-          <p class="mt-1">{resume.responsibilites}</p>
-        </div>
-      )
-    }
-    {
-      resume.icons && resume.icons.length > 0 && (
+      data.icons && data.icons.length > 0 && (
         <div class="flex flex-wrap gap-2 mt-6">
-          {resume.icons.map((icon) => (
+          {data.icons.map((icon) => (
             <span title={icon}>
               <Icon icon={icon} class="h-6 md:h-8" dimmed />
             </span>
@@ -61,3 +44,15 @@ const dateRange = [resume.from, resume.to].filter((v) => v).join(' - ');
     }
   </div>
 </li>
+
+<style is:global>
+  .resume-content > p:first-child {
+    @apply border-b border-b-slate-300 pb-4;
+  }
+  .resume-content > h2 {
+    @apply text-slate-600 font-extrabold tracking-tighter text-base mt-4 mb-1;
+  }
+  .resume-content > h2 + p {
+    @apply mt-0;
+  }
+</style>

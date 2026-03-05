@@ -1,9 +1,12 @@
 ---
+import { getCollection } from 'astro:content';
 import Container from '../common/Container.astro';
 import SectionHeader from '../common/SectionHeader.astro';
 import TimelineWrapper from '../common/TimelineWrapper.astro';
 import TimelineItem from '../common/TimelineItem.astro';
-import { resume } from '@/data/resume';
+
+const entries = await getCollection('resume');
+const sorted = entries.sort((a, b) => a.data.order - b.data.order);
 ---
 
 <section id="resume" class="pt-12">
@@ -11,13 +14,7 @@ import { resume } from '@/data/resume';
     <Container>
       <SectionHeader>Resume</SectionHeader>
       <TimelineWrapper>
-        {
-          resume.map((entry) => (
-            <TimelineItem resume={entry}>
-              <p>{entry.description}</p>
-            </TimelineItem>
-          ))
-        }
+        {sorted.map((entry) => <TimelineItem entry={entry} />)}
       </TimelineWrapper>
     </Container>
   </div>
