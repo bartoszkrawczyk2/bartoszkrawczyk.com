@@ -1,0 +1,38 @@
+---
+import { twMerge } from 'tailwind-merge';
+import classNames from 'classnames';
+
+interface Props {
+  class?: string;
+  dimmed?: boolean;
+  color?: string;
+  viewBox?: string;
+}
+
+const { class: className, dimmed, color, viewBox = '0 0 128 128', ...props } = Astro.props;
+---
+
+<svg
+  style={color ? { color } : undefined}
+  viewBox={viewBox}
+  class={classNames(twMerge('h-8', className), {
+    'icon-dimmed': dimmed,
+  })}
+  {...props}
+>
+  <slot />
+</svg>
+
+<style is:global>
+  .icon-dimmed path,
+  .icon-dimmed circle,
+  .icon-dimmed polygon {
+    @apply transition-colors;
+  }
+
+  .icon-dimmed:not(:hover) path,
+  .icon-dimmed:not(:hover) circle,
+  .icon-dimmed:not(:hover) polygon {
+    @apply fill-slate-400;
+  }
+</style>

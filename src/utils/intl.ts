@@ -2,7 +2,7 @@ export type FmtDate = 'Present' | Date;
 
 const formatter = new Intl.DateTimeFormat('en-GB', { month: 'short', year: 'numeric' });
 
-export const dateFmt = (date: FmtDate) => {
+export const dateFmt = (date: FmtDate): string => {
   if (date === 'Present') return date;
   return formatter.format(date);
 };

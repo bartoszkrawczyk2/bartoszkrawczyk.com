@@ -1,0 +1,37 @@
+---
+import Container from '../common/Container.astro';
+import Icon from '../common/icon/Icon.astro';
+import SectionHeader from '../common/SectionHeader.astro';
+---
+
+<section id="contact">
+  <Container>
+    <SectionHeader>Get in touch</SectionHeader>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-20">
+      <a
+        class="btn text-white bg-gray-900 hover:bg-gray-800"
+        href="https://www.linkedin.com/in/bartoszkrawczyk/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Icon icon="LinkedIn" class="[&>path]:fill-white" /> LinkedIn
+      </a>
+      <a
+        class="btn text-white bg-gray-900 hover:bg-gray-800"
+        href="https://github.com/bartoszkrawczyk2"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Icon icon="Github" class="[&>g]:fill-white" /> Github
+      </a>
+      <a
+        class="btn text-white bg-gray-900 hover:bg-gray-800"
+        href="https://twitter.com/bartosz_kr"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Icon icon="Twitter" class="[&>path]:fill-white" /> Twitter
+      </a>
+    </div>
+  </Container>
+</section>

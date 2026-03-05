@@ -1,0 +1,81 @@
+---
+import BaseIcon from './BaseIcon.astro';
+import type { IconType } from './types';
+export type { IconType } from './types';
+
+// Import all icons statically
+import Electron from './icons/Electron.astro';
+import Express from './icons/Express.astro';
+import Github from './icons/Github.astro';
+import Javascript from './icons/Javascript.astro';
+import Jest from './icons/Jest.astro';
+import LinkedIn from './icons/LinkedIn.astro';
+import NestJS from './icons/Nest.astro';
+import NextJs from './icons/Next.astro';
+import NodeJs from './icons/Node.astro';
+import Playwright from './icons/Playwright.astro';
+import ReactIcon from './icons/React.astro';
+import Redux from './icons/Redux.astro';
+import TailwindCSS from './icons/Tailwind.astro';
+import Twitter from './icons/Twitter.astro';
+import Typescript from './icons/Typescript.astro';
+import Vite from './icons/Vite.astro';
+import WebGL from './icons/WebGL.astro';
+import Webpack from './icons/Webpack.astro';
+import XState from './icons/XState.astro';
+import WebAssembly from './icons/Wasm.astro';
+import TensorFlowJs from './icons/Tf.astro';
+import StyledComponents from './icons/Styled.astro';
+import Cypress from './icons/Cypress.astro';
+import JQuery from './icons/JQuery.astro';
+import BackboneJs from './icons/Backbone.astro';
+import GulpJs from './icons/Gulp.astro';
+import Sass from './icons/Sass.astro';
+import PHP from './icons/Php.astro';
+import MySQL from './icons/MySQL.astro';
+import Wordpress from './icons/Wordpress.astro';
+
+const iconComponents = {
+  Electron,
+  Express,
+  Github,
+  Javascript,
+  Jest,
+  LinkedIn,
+  NestJS,
+  'Next.js': NextJs,
+  'Node.js': NodeJs,
+  Playwright,
+  React: ReactIcon,
+  Redux,
+  'Tailwind CSS': TailwindCSS,
+  Twitter,
+  Typescript,
+  Vite,
+  WebGL,
+  Webpack,
+  XState,
+  WebAssembly,
+  'TensorFlow.js': TensorFlowJs,
+  'Styled-components': StyledComponents,
+  Cypress,
+  jQuery: JQuery,
+  'Backbone.js': BackboneJs,
+  'Gulp.js': GulpJs,
+  Sass,
+  PHP,
+  MySQL,
+  Wordpress,
+} as const;
+
+interface Props {
+  icon: IconType;
+  class?: string;
+  dimmed?: boolean;
+}
+
+const { icon, class: className, dimmed } = Astro.props;
+const Component = iconComponents[icon];
+---
+
+{Component && <Component class={className} dimmed={dimmed} />}
