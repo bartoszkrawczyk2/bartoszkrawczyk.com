@@ -72,8 +72,8 @@ html {
 @media (min-width: 768px) {
   .animate-timeline-item {
     animation: fade-slide-in linear both;
-    animation-timeline: view();
-    animation-range: entry 45% entry 85%;
+    animation-timeline: view(auto 13%);
+    animation-range: entry 40% entry 90%;
   }
 }
 
