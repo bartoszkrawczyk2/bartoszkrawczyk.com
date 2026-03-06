@@ -3,7 +3,7 @@ company: VML
 position: Senior front-end developer
 from: 2015-09-01
 to: 2017-06-30
-order: 6
+order: 4
 icons:
   - Javascript
   - React

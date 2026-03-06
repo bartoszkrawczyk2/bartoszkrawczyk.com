@@ -6,7 +6,7 @@ import TimelineWrapper from '../common/TimelineWrapper.astro';
 import TimelineItem from '../common/TimelineItem.astro';
 
 const entries = await getCollection('resume');
-const sorted = entries.sort((a, b) => a.data.order - b.data.order);
+const sorted = entries.sort((a, b) => b.data.order - a.data.order);
 ---
 
 <section id="resume" class="pt-12">

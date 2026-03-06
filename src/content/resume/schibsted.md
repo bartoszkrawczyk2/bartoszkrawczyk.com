@@ -3,7 +3,7 @@ company: Schibsted Tech Polska
 position: Senior software engineer
 from: 2024-06-01
 to: Present
-order: 1
+order: 10
 icons:
   - Typescript
   - React

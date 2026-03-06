@@ -3,7 +3,7 @@ company: Legalcluster
 position: Senior front-end developer
 from: 2018-09-01
 to: 2021-10-01
-order: 3
+order: 7
 icons:
   - Typescript
   - React

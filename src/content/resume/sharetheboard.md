@@ -2,8 +2,8 @@
 company: ShareTheBoard
 position: Senior software developer
 from: 2021-11-01
-to: Present
-order: 2
+to: 2023-02-28
+order: 8
 icons:
   - Typescript
   - React

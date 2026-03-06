@@ -3,7 +3,7 @@ company: Pictemi
 position: Co-founder, front-end developer
 from: 2018-01-10
 to: 2023-01-31
-order: 4
+order: 6
 icons:
   - Typescript
   - React
